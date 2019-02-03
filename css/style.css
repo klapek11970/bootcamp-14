@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.carousel-cell {
+  width: 100%;
+  min-height: 250px;
+  height: 50vh;
+  background-size: cover;
+  background-position-y: center;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+.carousel-cell .container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: auto;
+  height: 100%;
+  max-width: 1200px;
+}
+
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: #333;
+}
+
+#reset {
+  position: absolute;
+  z-index: 1;
+  top: 1%;
+  left: 1%;
+  color: red;
+  background-color: silver;
+  border-radius: 10px;
+  padding: 5px;
+}
+/*# sourceMappingURL=style.css.map */
