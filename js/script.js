@@ -83,3 +83,20 @@ flkty.on( 'select', function() {
 	}
 });
 
+
+///////////////////
+//	Accordion - jQuery
+
+
+$("#accordion-jquery h3").click(function(){
+	var elm = $("#accordion-jquery .active").removeClass('active')
+	$(this).next().addClass('active')
+})
+
+/*
+.click(function(){  }),
+.addClass('class'),
+.removeClass('class'),
+.siblings('element#id').
+*/
+

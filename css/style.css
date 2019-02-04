@@ -32,6 +32,7 @@ body {
   width: min-content;
   max-width: 1200px;
   background-color: rgba(255, 255, 255, 0.5);
+  padding: 0 20px 0 20px;
 }
 
 .progress-bar {
@@ -54,5 +55,40 @@ body {
 #map {
   height: 50vh;
   width: 100%;
+}
+
+#accordion-container {
+  width: 1200px;
+  margin: auto;
+}
+
+#accordion-container h2, #accordion-container h3 {
+  text-align: center;
+}
+
+#accordion-container .container {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0 20px 0 20px;
+}
+
+#accordion-container .accordion {
+  border: #bbb 3px solid;
+}
+
+#accordion-container .accordion div {
+  height: 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+#accordion-container .accordion .active {
+  height: 100px;
+}
+
+#accordion-container .accordion h3 {
+  margin: 0;
+  border: #999 2px solid;
+  background: #aaa;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
