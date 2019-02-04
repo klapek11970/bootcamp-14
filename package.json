@@ -18,8 +18,7 @@
     "watch": "npm-run-all build -p watch:*",
     "watch:sassprefixer": "onchange sass/style.scss -- npm-run-all watch2:*",
     "watch2:1": "node-sass --output-style expanded --source-map true -o css sass",
-    "watch2:2": "autoprefixer-cli css/style.css",
-    "watch:browsersync": "browser-sync start --server --files 'css/*.css' '*.htm*'"
+    "watch2:2": "autoprefixer-cli css/style.css"
   },
   "repository": {
     "type": "git",
