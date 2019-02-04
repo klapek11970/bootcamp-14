@@ -22,10 +22,9 @@ body {
 		height:	100%;
 		width: min-content;
 		max-width: 1200px;
-		background-color: rgba(255,255,255,0.5)
+		background-color: rgba(255,255,255,0.5);
+		padding: 0 20px 0 20px;
 	}
-	
-	
 }
 
 .progress-bar {
@@ -50,3 +49,44 @@ body {
 	height: 50vh;
 	width: 100%;
 }
+
+
+#accordion-container{
+	width: 1200px;
+	margin: auto;
+	
+	& h2,& h3{
+		text-align: center
+	}
+	
+	.container {
+		background-color: rgba(255,255,255,0.5);
+		padding: 0 20px 0 20px;
+	}
+	
+	.accordion {
+		border: #bbb 3px solid;
+		
+		div {
+			height: 0;
+			transition: 0.5s;
+			overflow: hidden;
+		}
+		
+		.active {
+			+ div{
+				height: 100px;
+			}
+		}
+		
+		h3 {
+			margin: 0;
+			border: #999 2px solid;
+			background: #aaa;
+			cursor: pointer;
+		}
+	}
+}
+
+
+

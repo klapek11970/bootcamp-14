@@ -11,24 +11,28 @@
 
 </head>
 <body>
-		
+	
 	<div>
 		<a id="reset" href="#carousel-cell0">Reset</a>
-		
 		<div id="carousel">
-			<!--
-			<div class="carousel-cell" id="carousel-cell1" style="background-image:url(images/g1.png)">
-				<div class="container">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-				</div>
-			</div>
-			-->
 			
 		</div>
 		<div class="progress-bar"></div>
 	</div>
 	
 	<div id="map"></div>
+
+	<section id="accordion-container" class="container">
+		<h2>Accordion - jQuery</h2>
+		<div id="accordion-jquery" class="accordion">
+			<h3>Item 1</h3>
+			<div class="active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime accusantium sequi cumque quis aperiam nulla quo eveniet nostrum cum quae beatae cupiditate magni incidunt delectus, ducimus minus veritatis neque.</div>
+			<h3>Item 2</h3>
+			<div>Amet fugit deleniti voluptatum accusantium dignissimos dolore velit, veniam illum doloremque consectetur, laudantium enim ipsam debitis quia eum eligendi iure vel maiores rem. Quibusdam nobis assumenda illum blanditiis id modi!</div>
+			<h3>Item 3</h3>
+			<div>Consectetur repellat reiciendis distinctio! Voluptatum aperiam voluptatem qui cum sapiente sit facilis? Corporis, hic ab. Perspiciatis nisi culpa magni, eligendi aliquid ullam odio quis consequuntur inventore similique veniam recusandae accusamus?</div>
+		</div>
+	</section>
 
 	
 	<script id="template-carousel-item" type="x-tmpl-mustache">
@@ -40,7 +44,6 @@
 		</div>
 	</script>
 
-	
 	<script>
 		var carouselData = [
 		{
@@ -67,6 +70,7 @@
 		]
 	</script>
 	
+	<script src="vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
 	<script src="vendor/mustache.min.js" type="text/javascript"></script>
 	<script src="vendor/flickity.pkgd.min.js" type="text/javascript"></script>
 	<script src="vendor/hash.js" type="text/javascript"></script>
