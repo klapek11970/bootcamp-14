@@ -15,35 +15,62 @@
 	<div>
 		<a id="reset" href="#carousel-cell1">Reset</a>
 		
-		<div class="main-carousel">
+		<div id="carousel">
+			<!--
 			<div class="carousel-cell" id="carousel-cell1" style="background-image:url(images/g1.png)">
 				<div class="container">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 				</div>
 			</div>
-			<div class="carousel-cell" id="carousel-cell2" style="background-image:url(images/g2.png)">
-				<div class="container">
-				
-				</div>
-			</div>
-			<div class="carousel-cell" id="carousel-cell3" style="background-image:url(images/g3.png)">
-				<div class="container">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-				</div>
-			</div>
-			<div class="carousel-cell" id="carousel-cell4" style="background-image:url(images/g4.png)">
-				<div class="container">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-				</div>
-			</div>
-			<div class="carousel-cell" id="carousel-cell5" style="background-image:url(images/g5.png)">
-				<div class="container">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-				</div>
-			</div>
+			-->
+			
 		</div>
 		<div class="progress-bar"></div>
 	</div>
+	
+	<script id="template-carousel-list" type="x-tmpl-mustache">
+		{{{cell}}}
+	</script>
+	
+	<script id="template-carousel-item" type="x-tmpl-mustache">
+		<div class="carousel-cell" id="carousel-cell{{id}}" style="background-image:url({{image}})">
+				<div class="container">
+					<h2>{{{title}}}</h2>
+					{{{description}}}
+				</div>
+		</div>
+	</script>
+	
+	<script>
+		var carouselData = [
+		{
+			id : 1,
+			image :'images/g1.png',
+			title : 'title 1',
+			description : '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+		},{
+			id : 2,
+			image :'images/g2.png',
+			title : 'title 2',
+			description : '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+		},{
+			id : 3,
+			image :'images/g3.png',
+			title : 'title 3',
+			description : '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+		},{
+			id : 4,
+			image :'images/g4.png',
+			title : 'title 4',
+			description : '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+		},{
+			id : 5,
+			image :'images/g5.png',
+			title : 'title 5',
+			description : '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+		}
+		]
+	</script>
 	
 	<script src="vendor/mustache.min.js" type="text/javascript"></script>
 	<script src="vendor/flickity.pkgd.min.js" type="text/javascript"></script>

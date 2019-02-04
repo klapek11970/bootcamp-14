@@ -4,8 +4,6 @@ body {
 	font-family: sans-serif;
 }
 
-
-
 .carousel-cell {
 	width: 100%;
   min-height: 250px;
@@ -15,14 +13,16 @@ body {
   border-radius: 5px;
   counter-increment: carousel-cell;
 	
-
 	.container {
 		display: flex;
+		flex-flow: column;
 		justify-content: center;
 		align-items: center;
 		margin: auto;
 		height:	100%;
+		width: min-content;
 		max-width: 1200px;
+		background-color: rgba(255,255,255,0.5)
 	}
 	
 	
