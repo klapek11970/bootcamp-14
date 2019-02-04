@@ -1,7 +1,7 @@
 'use strict';
 //key: AIzaSyCV5qFMiOUGRXAL67rB-D18TVEWPjYNGVI
 
-var selectid = 0
+var selectid = 0 //store what mark id on map was pressed
 
 ///////////////////
 // Google Map
@@ -19,7 +19,7 @@ var locations = {
 function initMap() {
   // The map, centered at Uluru
   map =
-	new google.maps.Map(document.getElementById('map'), {zoom: 4, center: locations.Wasaw});
+	new google.maps.Map(document.getElementById('map'), {zoom: 4, center: locations.Uluru});
 
   var city
 	for (city of Object.keys(locations)){
@@ -28,7 +28,6 @@ function initMap() {
 		marker.id = id
 		
 		marker.addListener('click', function() {
-			event.preventDefault();
 			selectid = this.id // dont centre map after select marker
 			flkty.select(this.id);
 			//window.alert("you pressed at "+this.city+" marker")
@@ -75,49 +74,7 @@ flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
   progressBar.style.width = progress * 100 + '%';
 });
-/*
-var cells = document.querySelectorAll('.container img')
 
-for (var key of cells){
-	key.addEventListener('click', function(event){
-		event.preventDefault();
-		console.log(!maplock);
-		
-		if(!maplock){
-			//console.log( locations[markers[Flickity.data( carousel ).selectedIndex].city] );
-			map.panTo( locations[markers[Flickity.data( carousel ).selectedIndex].city] );
-			map.setZoom(5);
-		}
-	});
-}
-
-//dont change location if mousedown and moved
-var maplock = false
-
-key.addEventListener('click', function(event){
-	event.preventDefault();
-	console.log(!maplock);
-	
-	if(!maplock){
-		//console.log( locations[markers[Flickity.data( carousel ).selectedIndex].city] );
-		map.panTo( locations[markers[Flickity.data( carousel ).selectedIndex].city] );
-		map.setZoom(5);
-	}
-});
-
-
-flkty.on( 'pointerMove', function() {
-	maplock = true
-	//console.log('pointerMove')
-});
-
-flkty.on( 'pointerUp', function() {
-	//console.log('pointerUp')
-	window.setTimeout(function(){
-			maplock = false
-	}, 50);
-});
-*/
 
 flkty.on( 'select', function() {
 	if( selectid !== Flickity.data( carousel ).selectedIndex ){ // dont centre map after select marker
