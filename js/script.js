@@ -3,12 +3,14 @@
 
 ///////////////////
 // Google Map
-var markers = []
+//var markers = []
 
 var locations = {
 	uluru : {lat: -25.344, lng: 125},
-	mark1 : {lat: -25.344, lng: 130},
-	mark2 : {lat: -25.344, lng: 135}
+	Wasaw : {lat: 52.232855, lng: 20.9211131},
+	Berlin : {lat: 52.5067614, lng: 13.2846508},
+	W : {lat: 47.2511082, lng: -123.1246739},
+	loc4 : {lat: 55.5807482, lng: 36.82515}
 }
 
 function initMap() {
@@ -19,7 +21,11 @@ function initMap() {
   
   var key
 	for (key in locations){
-		markers.push(new google.maps.Marker({position: locations[key], map: map})) // locations[key] ?!?! czemu jako array a nie jako obiekt obj.key
+		var marker = new google.maps.Marker({position: locations[key], map: map}) // locations[key] ?!?! czemu jako array a nie jako obiekt obj.key
+		//markers.push(marker)
+		marker.addListener('click', function(){
+			info.innerHTML = 'You clicked '+key;
+		});	
 	}
 }
 
